@@ -34,7 +34,7 @@ export default {
     watchConfig: function() {
       let raw = _.pick(this.config, 'watch', 'candleWriter');
       let watchConfig = Vue.util.extend({}, raw);
-      watchConfig.type = 'market watcher';
+      watchConfig.type = this.config.type;
       watchConfig.mode = 'realtime';
       return watchConfig;
     },
